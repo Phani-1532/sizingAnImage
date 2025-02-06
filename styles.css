@@ -77,6 +77,19 @@ body{
     display: none;
 }
 
+.display{
+    font-size: 16px;
+    font-weight: 400;
+    color: #ed1b1b;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.display p strong{
+    font-size: 18px;
+    font-weight: bold;
+    color: #bd0c0c;
+}
 
 
 

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let minusBtn = document.getElementById("minus-btn");
     let resetBtn = document.getElementById("reset-btn");
     let tooBig = document.getElementById("too-big");
+    let display = document.getElementById('image-width')
     let imageWidth = 200;
 
     plusBtn.addEventListener('click', () => {
@@ -11,12 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if(imageWidth > 250) {
             tooBig.textContent = "Image is too big";
             tooBig.style.display = "block";
-            image.style.border = "2px solid red";
         }
         else{
+            display.textContent = ` ${imageWidth}px `;
             image.style.width = `${imageWidth}px`;
             tooBig.style.display = "none";
-            image.style.border = "none";
             tooBig.textContent = "";
         }
     })
@@ -26,11 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if(imageWidth < 150) {
             tooBig.textContent = "Image is too small";
             tooBig.style.display = "block";
-            image.style.border = "2px solid red";
         }else{
+            display.textContent = ` ${imageWidth}px `;
             image.style.width = `${imageWidth}px`;
             tooBig.style.display = "none";
-            image.style.border = "none";
             tooBig.textContent = "";
         }
     })
@@ -38,8 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     resetBtn.addEventListener('click', () => {
         imageWidth = 200;
         image.style.width = `${imageWidth}px`;
+        display.textContent = ` ${imageWidth}px `;
         tooBig.style.display = "none";
-        image.style.border = "none";
         tooBig.textContent = "";
     })
     
